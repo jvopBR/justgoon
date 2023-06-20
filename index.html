@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <link rel="icon" href="">
+    <title>C trwezngrq wayozze</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TM5G3YM9ES"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-TM5G3YM9ES');
+    </script>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+      body {
+          background-image: url("https://file.coffee/u/phr7qAvPVpr3mJUIuqcwO.jpg");
+      }
+
+      .riddle {
+          max-width: 1000px;
+          margin: auto;
+
+      }
+
+
+
+      .column {
+
+          padding: 30px;
+      }
+
+
+      .row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 40px;
+          width: 100%;
+      }
+
+      @media only screen and (max-width: 1200px) {
+          h1 {
+              font-size: 24px;
+          }
+
+          .riddle {
+              font-size: 15px;
+              font-family: "Anonymous Pro", monospace;
+
+          }
+      }
+
+
+      @media only screen and (max-width: 767px) {
+          .riddle {
+              font-size: 8px;
+          }
+
+          h1 {
+              font-size: 20px;
+          }
+
+          input[type=text] {
+              font-family: "Anonymous Pro", monospace;
+          }
+
+
+          input[type=button],
+          input[type=submit],
+          input[type=reset] {
+              font-family: "Anonymous Pro", monospace;
+          }
+
+          .row {
+              flex-direction: column;
+              gap: 40px;
+          }
+
+          form {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+      }
+
+      @media only screen and (max-width: 317px) {
+
+          h1 {
+              font-size: 12px;
+          }
+
+      }
+    </style>
+    
+    <script src=""></script>
+    <link rel="stylesheet" href="./css/mainTablet.css">
+    <link rel="stylesheet" href="./css/mainMobile.css">
+  </head>
+  <body>
+    <div class="riddle" id="riddle">
+      <div class="logo" id="logo">
+        <a href=""><img src="https://file.coffee/u/ORjX5zVtnWoz4CiEYj5T3.png"
+                          alt="alternatetext"></a>
+      </div>
+      <h1>
+        104 116 116 112 115 58 47 47 105 109 103 117 114 46 99 111 109 47 117 115 101 114 47 100 97 103 100 120 99 98 103 109 119
+      </h1>
+      <div class="box">
+        <form>
+          <input id="answer" type="text" name="q" placeholder="Enter your awnser here..."/>
+          <input type="submit" value="ENTER"/>
+        </form>
+      </div>
+      <p class="LN">The federation is watching</p>
+    </div>
+    <script>
+      document.addEventListener("keydown", function (e) {
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+        });
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+
+        
+
+
+
+        document.querySelector("input#answer").addEventListener("input", function () {
+            const allowedCharacters = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBNz ";
+            this.value = this.value.split('').filter(char => allowedCharacters.includes(char)).join('')
+            this.value = this.value.split(' ').slice(0, 1).join(' ');
+        });
+
+        var form = document.querySelector("form");
+        var riddle = new URLSearchParams(window.location.search).get("page");
+        var id = new URLSearchParams(window.location.search).get("id");
+        var lastClickedTime = 0
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var timeNow = new Date();
+            var difference = timeNow - lastClickedTime;
+            difference = difference / 1000;
+            if (difference >= 25000) {
+                var answer = document.querySelector("input[name=q]").value;
+                var url = "http://localhost:3000/?ans=" + answer + "&id=1";
+                fetch(url)
+                    .then(response => response.json())
+                    .then(function (data) {
+                        console.log("1", data)
+                        var json = {
+                            "suspicious": [
+                                "Enough. Slow down.",
+                                "Too fast.",
+                                "Self-restraint is a virtue.",
+                                "This is an exercise in patience.",
+                                "Fuck off, try again",
+                                "Demasiado rápido.",
+                                "La autocontrol  es una virtud.",
+                                "Este es un ejercicio de paciencia.",
+                                "O suficiente. Mais devagar.",
+                                "Rápido demais.",
+                                "O autocontrole é uma virtude.",
+                                "Este é um exercício de paciência.",
+                            ]
+                        }
+
+                        /* Ei, o que você está procurando aqui de interessante?? -.- */
+
+                        if (data.suspicius == true) {
+                            alert(json.suspicious[Math.floor(Math.random() * json.suspicious.length)])
+                        }
+
+                        else if (data.finished == true) {
+                            window.location.href = "index2.html";
+                        } else if (data.success == true) {
+
+                            window.location.href = "index2.html";
+                        } else if (data.success == false) {
+                            alert("Hmm, doesn't seem like that's the answer...");
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    });
+            } else {
+                                var json = {
+                    "suspicious": [
+                        "Enough. Slow down.",
+                        "Too fast.",
+                        "Self-restraint is a virtue.",
+                        "This is an exercise in patience.",
+                        "Fuck off, try again",
+                        "Demasiado rápido.",
+                        "La autocontrol  es una virtud.",
+                        "Este es un ejercicio de paciencia.",
+                        "O suficiente. Mais devagar.",
+                        "Rápido demais.",
+                        "O autocontrole é uma virtude.",
+                        "Este é um exercício de paciência.",
+                    ]
+                }
+                alert(json.suspicious[Math.floor(Math.random() * json.suspicious.length)])
+
+            }
+            lastClickedTime = new Date()
+        });
+    </script>
+
+  </body>
+</html>

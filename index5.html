@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <link rel="icon" href="https://file.coffee/u/LqIv6Ip2zkS4h9EyRmXeE.jpg">
+    <title>Testando index 5 </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TM5G3YM9ES"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      
+      gtag('config', 'G-TM5G3YM9ES');
+    </script>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+      body {
+          background-image: url("https://file.coffee/u/rPDZtEPhe8DX4dOY6keZy.png");
+      }
+
+      .riddle {
+          max-width: 1000px;
+          margin: auto;
+
+      }
+
+
+
+      .column {
+
+          padding: 30px;
+      }
+
+
+      .row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 40px;
+          width: 100%;
+      }
+
+      @media only screen and (max-width: 1200px) {
+          h1 {
+              font-size: 24px;
+          }
+
+          .riddle {
+              font-size: 15px;
+              font-family: "Anonymous Pro", monospace;
+
+          }
+      }
+
+
+      @media only screen and (max-width: 767px) {
+          .riddle {
+              font-size: 8px;
+          }
+
+          h1 {
+              font-size: 20px;
+          }
+
+          input[type=text] {
+              font-family: "Anonymous Pro", monospace;
+          }
+
+
+          input[type=button],
+          input[type=submit],
+          input[type=reset] {
+              font-family: "Anonymous Pro", monospace;
+          }
+
+          .row {
+              flex-direction: column;
+              gap: 40px;
+          }
+
+          form {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+          }
+      }
+
+      @media only screen and (max-width: 317px) {
+
+          h1 {
+              font-size: 12px;
+          }
+
+      }
+    </style>
+    
+    <script src=""></script>
+    <link rel="stylesheet" href="./css/mainTablet.css">
+    <link rel="stylesheet" href="./css/mainMobile.css">
+  </head>
+  <body>
+    <div class="riddle" id="riddle">
+      <div class="logo" id="logo">
+        <a href=""><img src="https://file.coffee/u/wFabBR4jeaNPNtFIlQumK.png"
+                          alt="alternatetext"></a>
+      </div>
+      <div class="container">
+      <h1>
+        Nunca antes me habías visto, pero ¿tal vez me observaste de reojo? Seguramente has de haberme visto por
+        ahí.
+        Yo sé que te he visto. Te he visto en muchos sitios.<br>
+        <br>
+        La primera vez que te vi fue en la parada del autobús. No parecías saber a dónde ibas, pero seguramente
+        lo
+        averiguaste.<br>
+        <br>
+        Después fue en la tienda de discos. Estabas tan concentrado en la música que de seguro no te
+        percataste.<br>
+        <br>
+        También te vi en el banco. Recuerdo que ese día estaba nublado. Dijeron que se avecinaba una gran
+        tormenta
+        y, sin embargo, los pájaros siguieron cantando. Al final, las lluvias nunca llegaron.
+        <br><br>
+        Nunca te vi en la cafetería, pero sé que has estado allí. A tus amigos les gusta hablar, y nunca es
+        sobre el
+        clima.<br><br>
+        Poco después, te vi en la playa, con la mirada fija en el agua sombría, como si trataras de descubrir
+        todos
+        los secretos que la mar te ocultaba.<br><br>
+
+        No sé por qué estaba en la granja ese día, pero tú también estabas allí. Te adentraste en el laberinto
+        de
+        maíz, si no recuerdo mal. Eres mucho más valiente que yo.<br><br>
+
+        Dime, ¿qué te tenía tan desconcertado que decidiste que la mejor solución era rentar un libro de
+        instrucciones en la biblioteca? Bien podrías solo haber estado leyendo esa cosa al revés.<br><br>
+
+        En otra ocasión, te vi en el mercado. Y es gracioso... en inglés, "comprar" es "purchase". Pur-chase.
+        Crees
+        que persigues algo, pero ¿qué te persigue a ti?<br><br>
+        Y un día, una pregunta importante rondaba mi mente: Si un árbol cae en el bosque y no hay nadie cerca
+        para
+        oírlo, ¿hace ruido? No lo sabría. No te adentraste en el bosque ese día.
+        <br><br>
+        Pero el lugar más fascinante donde te vi fue en un sitio al que nunca pensé que llegarías. Esa estación
+        de
+        tren. Sabías que no habría marcha atrás, y aun así lo hiciste. Sólo para poder mirarme a los ojos al
+        mismo
+        tiempo que las puertas se cerraban y el chirrido de las ruedas ahogaba mi risa.<br><br>
+        Por fin me habías visto.<br><br>
+        <u>Bueno, ¿quién soy?</u>
+    </h1>
+    </div>
+      <div class="box">
+        <form>
+          <input id="answer" type="text" name="q" placeholder="Try here..."/>
+          <input type="submit" value="ENTER"/>
+        </form>
+      </div>
+      <p class="LN"> </p>
+    </div>
+    <script>
+      document.addEventListener("keydown", function (e) {
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+        });
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+
+        
+
+
+
+        document.querySelector("input#answer").addEventListener("input", function () {
+            const allowedCharacters = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBNz_ ";
+            this.value = this.value.split('').filter(char => allowedCharacters.includes(char)).join('')
+            this.value = this.value.split(' ').slice(0, 1).join(' ');
+        });
+
+        var form = document.querySelector("form");
+        var riddle = new URLSearchParams(window.location.search).get("page");
+        var id = new URLSearchParams(window.location.search).get("id");
+        var lastClickedTime = 0
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var timeNow = new Date();
+            var difference = timeNow - lastClickedTime;
+            difference = difference / 1000;
+            if (difference >= 25000) {
+                var answer = document.querySelector("input[name=q]").value;
+                var url = "http://localhost:3000/?ans=" + answer + "&id=4";
+                fetch(url)
+                    .then(response => response.json())
+                    .then(function (data) {
+                        console.log("1", data)
+                        var json = {
+                            "suspicious": [
+                                "Enough. Slow down.",
+                                "Too fast.",
+                                "Self-restraint is a virtue.",
+                                "This is an exercise in patience.",
+                                "Fuck off, try again",
+                                "Demasiado rápido.",
+                                "La autocontrol  es una virtud.",
+                                "Este es un ejercicio de paciencia.",
+                                "O suficiente. Mais devagar.",
+                                "Rápido demais.",
+                                "O autocontrole é uma virtude.",
+                                "Este é um exercício de paciência.",
+                            ]
+                        }
+
+                        /* Ei, o que você está procurando aqui de interessante?? -.- */
+
+                        if (data.suspicius == true) {
+                            alert(json.suspicious[Math.floor(Math.random() * json.suspicious.length)])
+                        }
+
+                        else if (data.finished == true) {
+                            window.location.href = "index5.html";
+                        } else if (data.success == true) {
+
+                            window.location.href = "index5.html";
+                        } else if (data.success == false) {
+                            alert("Hmm, doesn't seem like that's the answer...");
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    });
+            } else {
+                                var json = {
+                    "suspicious": [
+                        "Enough. Slow down.",
+                        "Too fast.",
+                        "Self-restraint is a virtue.",
+                        "This is an exercise in patience.",
+                        "Fuck off, try again",
+                        "Demasiado rápido.",
+                        "La autocontrol  es una virtud.",
+                        "Este es un ejercicio de paciencia.",
+                        "O suficiente. Mais devagar.",
+                        "Rápido demais.",
+                        "O autocontrole é uma virtude.",
+                        "Este é um exercício de paciência.",
+                    ]
+                }
+                alert(json.suspicious[Math.floor(Math.random() * json.suspicious.length)])
+
+            }
+            lastClickedTime = new Date()
+        });
+    </script>
+
+  </body>
+</html>
